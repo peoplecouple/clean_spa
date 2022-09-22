@@ -11,7 +11,10 @@
     width: 600px;
     height: 300px;
     margin: 0 0 0 -585px;
+    // white-space: pre; 
   }
+
+
 
   .boom {
     position: absolute;
@@ -22,4 +25,157 @@
     height: 300px;
     margin: 0 0 0 0;
   }
+
+  .main_link {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+
+
+    li {
+      flex: 1;
+
+      &:last-child {
+        flex: 2;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        // background: url(../../public/assets/images/icon_set_w.png);
+      }
+
+      .case {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100px;
+        height: 130px;
+        color: #fff;
+        background-image: url(../../public/assets/images/icon_set_w.png);
+        background-repeat: no-repeat;
+      }
+
+      $bg-color : #da544b,
+      #f4cb4f,
+      #337689,
+      #6fa476,
+      #f4f4f4;
+
+      @each $bg in $bg-color {
+        $index: index($bg-color, $bg);
+
+        &:nth-child(#{$index}) {
+          background-color: $bg;
+        }
+      }
+    }
+
+    @for $i from 1 to 5 {
+      li:nth-child(#{$i}) .case {
+        background-position-x: ($i - 1)* -100px;
+      }
+    }
+  }
+
+  .customer {
+    $color : #337689;
+    position: relative;
+    padding: 50px 30px 0 0;
+    text-align: right;
+
+    strong {
+      display: block;
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      color: $color;
+    }
+
+    p {
+      line-height: 1.45;
+    }
+
+    i {
+      position: absolute;
+      right: 30px;
+      top: -30px;
+      background: $color;
+      color: #fff;
+      font-size: 30px;
+      padding: 10px;
+      border-radius: 50%;
+    }
+  }
 }
+
+.MainContent {
+  padding: 150px 0 10px 0;
+  background: linear-gradient(to top, #f4f4f4 50%, transparent 50%);
+  //gradient에서 앞 숫자가 같거나 크면 색이 딱 나뉜다.
+
+  .inner {
+    display: flex;
+    gap: 30px;
+
+    &>* {
+      flex: 1;
+    }
+
+    figure {
+      margin: 0 0 30px 0;
+      border-radius: 50px 0;
+      overflow: hidden;
+    }
+
+    strong {
+      position: relative;
+      display: block;
+      font-size: 25px;
+      margin: 0 0 30px 0;
+
+      &::before {
+        position: absolute;
+        top: -55px;
+        right: 30px;
+        content: "MORE";
+        font-size: 12px;
+        font-weight: 700;
+        border: 50%;
+        background: rgba(244, 203, 79, 0.8);
+        border-radius: 50%;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 1px;
+        background: #da544b;
+        margin: 15px 0
+      }
+    }
+
+    p {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}
+
+
+
+
+// * {
+//   outline: 1px solid;
+// }

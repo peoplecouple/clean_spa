@@ -46,6 +46,7 @@ body {
   line-height: 1;
   letter-spacing: -0.025em;
   color: #444;
+  word-break: keep-all;
 }
 
 ul,
@@ -71,6 +72,11 @@ figure {
   padding: 0;
   font-size: inherit;
   font-weight: inherit;
+  white-space: pre-wrap;
+}
+
+p {
+  line-height: 1.45;
 }
 
 a {

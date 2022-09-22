@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Sub02() {
+function Sub02({content}) {
   return (
-    <div>Sub02</div>
+    <div>
+      {content[0].des}
+    </div>
   )
 }
 
