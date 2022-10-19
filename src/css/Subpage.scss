@@ -154,3 +154,17 @@
 
 
 }
+
+.Footer {
+  border-top: 1px solid #ddd;
+  padding: 50px 0;
+  text-align: center;
+  background: #f4f4f4;
+  line-height: 22px;
+  font-size: 15px;
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}

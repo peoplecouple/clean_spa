@@ -6,7 +6,6 @@ import Sub01 from "./pages/Sub01";
 import Sub02 from "./pages/Sub02";
 import Sub03 from "./pages/Sub03";
 import Sub04 from "./pages/Sub04";
-import Board from "./pages/Board";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 
@@ -39,7 +38,6 @@ const App = () => {
         <Route path="/sub02" element={<Sub02 content={MAINSLIDE} />}></Route>
         <Route path="/sub03" element={<Sub03 content={MAINSLIDE} />}></Route>
         <Route path="/sub04" element={<Sub04 content={MAINSLIDE} />}></Route>
-        <Route path="/board" element={<Board content={MAINSLIDE} />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
       <Footer content={COMPANY} />

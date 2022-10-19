@@ -3,15 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import 'swiper/css';
 import styled from 'styled-components';
-
 import { Link } from 'react-router-dom';
 
-const ML = [
-  { tit: "깔끔이청소 소개", link: "/sub01" },
-  { tit: "아파트입주청소", link: "/sub02" },
-  { tit: "이사/상가청소", link: "/sub03" },
-  { tit: "사무실청소", link: "/sub04" },
-]
 
 const SlideItm = styled.div`
 .tit{
@@ -82,8 +75,14 @@ span{
 `
 
 function MainVisual({ word }) {
-  const [IDX, setIDX] = useState()
+  const [idxn, setIdxn] = useState()
   const MS = useRef(null)
+  const ML = [
+    { tit: "깔끔이청소 소개", link: "/sub01" },
+    { tit: "아파트입주청소", link: "/sub02" },
+    { tit: "이사/상가청소", link: "/sub03" },
+    { tit: "사무실청소", link: "/sub04" },
+  ]
 
   return (
     <section className='MainVisual'>
@@ -97,7 +96,7 @@ function MainVisual({ word }) {
         }}
         direction={"vertical"}
         loop={true}
-        onSlideChange={el => setIDX(el.realIndex)}
+        onSlideChange={el => setIdxn(el.realIndex)}
       >
         {
           word.map((el, idx) => {
@@ -120,9 +119,9 @@ function MainVisual({ word }) {
               return (
                 <li
                   key={idx}
-                  className={idx === IDX ? 'on' : ''}
+                  className={idx === idxn ? 'on' : ''}
                   onClick={() => { MS.current.swiper.slideTo(idx + 1) }}
-                >0{idx + 1}</li>
+                >{idx + 1}</li>
               )
             })
           }
@@ -133,7 +132,7 @@ function MainVisual({ word }) {
         <Arrows>
           <i className='xi-arrow-right' onClick={() => MS.current.swiper.slideNext()}></i>
         </Arrows>
-        <SlideNum>0{IDX + 1} / <span>0{word.length}</span></SlideNum>
+        <SlideNum>0{idxn + 1} / <span>0{word.length}</span></SlideNum>
       </div>
       <ul className="main_link inner">
         {

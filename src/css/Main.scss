@@ -129,7 +129,7 @@
         flex: 2;
       }
 
-      a {
+      &>a {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -206,7 +206,7 @@
 }
 
 .MainContent {
-  padding: 150px 0 10px 0;
+  padding: 150px 0 100px 0;
   background: linear-gradient(to top, #f4f4f4 50%, transparent 50%);
   //gradient에서 앞 숫자가 같거나 크면 색이 딱 나뉜다.
 
