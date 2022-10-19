@@ -1,0 +1,156 @@
+.Subpage {
+
+  .sub {
+    display: flex;
+
+    aside {
+      width: 330px;
+      border-left: 1px solid #ddd;
+      min-height: 500px;
+      padding: 50px 0 0 50px;
+    }
+
+    article {
+      flex: 1; //aside는 width주고 여기만 flex주니까 나머지를 차지하라가 됨
+      padding: 50px 50px 100px 0;
+    }
+  }
+
+  .nav_bar {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #f4f4f4;
+    text-align: right;
+    line-height: 30px;
+  }
+}
+
+.aside_lnb {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 80px 0;
+
+  li {
+
+    line-height: 45px;
+  }
+
+  a {
+    display: block;
+    border-bottom: 1px solid #ddd;
+
+    &::before {
+      content: "\e93e";
+      font-family: xeicon;
+      font-size: 8px;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+    }
+
+    &.active {
+      padding: 0 0 0 15px;
+      color: #fff;
+      background: linear-gradient(45deg, #369, #000);
+      border-radius: 15px;
+      border-bottom: 1px solid transparent;
+    }
+
+
+  }
+}
+
+.aside_customer {
+  text-align: right;
+
+  img {
+    margin: 0 0 50px 0;
+  }
+
+  strong {
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  hr {
+    margin: 10px 0;
+    border-top: 1px solid #369;
+  }
+
+}
+
+.Article {
+  .tit {
+    line-height: 45px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 50px 0;
+
+    strong {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .bg {
+    position: relative;
+    height: 300px;
+    background: url(../../public/assets/images/main_slider01.jpg) no-repeat right top/cover;
+    border-left: 5px solid #369;
+    padding: 100px 0 0 100px;
+    margin: 0 0 50px;
+
+    h2 {
+      height: 90px;
+      font-size: 50px;
+      font-weight: 800;
+      background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+      color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .sub_tit {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 1px;
+      background: #0a96ba;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .sub_des {
+    margin: 0 0 50px 0;
+  }
+
+  .sub_img {
+    display: flex;
+    gap: 15px;
+    margin: 0 0 50px 0;
+  }
+
+  .sub_service {
+    li {
+      position: relative;
+      padding: 0 0 0 20px;
+      line-height: 30px;
+      border-bottom: 1px solid #ddd;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background: #0a96ba;
+      }
+    }
+  }
+
+
+}

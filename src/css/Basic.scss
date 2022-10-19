@@ -4,11 +4,11 @@ $f-s: 14px;
 $f-m: 17px;
 $f-b: 20px;
 
-body{
+body {
   overflow-x: hidden;
 }
 
-.Wrapper{
+.Wrapper {
   min-width: 1900px;
 }
 
@@ -59,16 +59,31 @@ body{
         width: 0;
         height: 2px;
         background: $c-m;
-  
+
       }
-  
+
       &.active::after {
         width: 100%;
         transition: 0.5s;
       }
     }
 
-   
+
+  }
+
+  .Footer {
+    border-top: 1px solid #ddd;
+    padding: 50px 0;
+    text-align: center;
+    background: #f4f4f4;
+    line-height: 22px;
+    font-size: 14px;
+
+    li {
+      display: inline-block;
+
+    }
+
   }
 
 

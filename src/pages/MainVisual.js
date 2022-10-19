@@ -136,6 +136,34 @@ function MainVisual({ word }) {
         <SlideNum>0{IDX + 1} / <span>0{word.length}</span></SlideNum>
       </div>
       <ul className="main_link inner">
+        {
+          ML.map((lnk, idx) => {
+            return (
+              <li key={idx}>
+                <Link to={lnk.link}>
+                  <div className="case">
+                    <span>{lnk.tit}</span>
+                  </div>
+                </Link>
+              </li>
+            )
+          })
+        }
+        <li>
+          <div className="customer">
+            <strong><a href="tel:011-592-4960">011-592-4960</a></strong>
+            <p>
+              부산 김해 양산 기장 아파트입주청소 이사청소<br />
+              믿고 맡길 수 있는 청소 전문업체
+            </p>
+            <i className='xi-user-plus-o'></i>
+          </div>
+        </li>
+      </ul>
+
+
+
+      {/* <ul className="main_link inner">
 
         {
           ML.map((el, idx) => {
@@ -159,7 +187,7 @@ function MainVisual({ word }) {
             <i className='xi-user-plus-o'></i>
           </div>
         </li>
-      </ul>
+      </ul> */}
     </section>
   )
 }
